@@ -72,5 +72,5 @@ Deno.serve(async req=>{
    }
   }
   return json({accepted:true});
- }catch(err){console.error("Webhook processing failed",err);return json({error:"processing_failed"},500)}
+ }catch(err){console.error("Webhook processing failed",err);await supabase.from("webhook_deliveries").delete().eq("delivery_id",delivery);return json({error:"processing_failed"},500)}
 });

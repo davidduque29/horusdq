@@ -202,7 +202,7 @@ create policy "members read incidents" on public.incidents for select to authent
 -- Atomic claim: service-role only; prevents duplicate concurrent dispatch.
 create or replace function public.claim_notification_batch(batch_limit integer default 25)
 returns setof public.notification_outbox
-language plpgsql security definer set search_path=public,pg_temp
+language plpgsql security invoker set search_path=public,pg_temp
 as $$
 begin
  if current_user <> 'service_role' then raise exception 'forbidden'; end if;
