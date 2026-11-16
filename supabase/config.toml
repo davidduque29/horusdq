@@ -1,0 +1,8 @@
+[functions.github-webhook]
+verify_jwt = false
+
+[functions/dispatch-notifications]
+verify_jwt = false
+
+[functions.health-monitor]
+verify_jwt = false
