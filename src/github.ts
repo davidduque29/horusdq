@@ -8,7 +8,7 @@ export function timeAgo(value:string,now=Date.now()){const seconds=Math.max(0,Ma
 export async function loadRepo(repo:Repo,signal?:AbortSignal):Promise<Snapshot>{
   try{const url='https://api.github.com/repos/'+encodeURIComponent(repo.owner)+'/'+encodeURIComponent(repo.repo)+'/actions/runs?per_page=12';
     const res=await fetch(url,{headers:{Accept:'application/vnd.github+json'},signal});
-    if(!res.ok)return {repo,runs:[],error:res.status===404?'Sin acceso público o repositorio no encontrado':res.status===403?'Límite de API o acceso restringido':'GitHub respondió '+res.status};
+    if(!res.ok)return {repo,runs:[],error:res.status===404?'No disponible públicamente (privado o inexistente)':res.status===403?'Límite de API o acceso restringido':'GitHub respondió '+res.status};
     const data=await res.json() as {workflow_runs?:Run[]};return {repo,runs:data.workflow_runs||[],at:new Date().toISOString()};
   }catch(err){if(signal?.aborted)throw err;return {repo,runs:[],error:'Error de conexión con GitHub'}}
 }
