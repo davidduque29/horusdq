@@ -1,0 +1,2 @@
+import {describe,it,expect} from 'vitest';import {runState,timeAgo} from './github';
+describe('semántica de monitoreo',()=>{it('no presume éxito cuando faltan datos',()=>expect(runState()).toBe('unknown'));it('distingue errores y ejecución',()=>{expect(runState({status:'completed',conclusion:'failure'} as never)).toBe('failure');expect(runState({status:'in_progress',conclusion:null} as never)).toBe('running')});it('formatea tiempos',()=>expect(timeAgo('2026-01-01T00:00:00Z',Date.parse('2026-01-01T00:10:00Z'))).toBe('Hace 10 min'))});

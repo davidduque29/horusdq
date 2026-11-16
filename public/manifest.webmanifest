@@ -1,0 +1,18 @@
+{
+  "name": "HorusDQ · Centro de monitoreo",
+  "short_name": "HorusDQ",
+  "description": "Monitorea pipelines de GitHub Actions",
+  "start_url": "/horusdq/",
+  "scope": "/horusdq/",
+  "display": "standalone",
+  "background_color": "#07143A",
+  "theme_color": "#07143A",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
