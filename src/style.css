@@ -92,3 +92,12 @@
 /* Live deployment indicator, visible only while latest workflow is queued or running */
 .deploying-label{display:inline-flex;align-items:center;gap:7px;padding:6px 9px;border-radius:7px;background:color-mix(in srgb,var(--cyan) 14%,transparent);color:var(--cyan);font-size:11px;font-weight:800;white-space:nowrap}
 .deploying-label svg{flex-shrink:0}
+
+/* Approved deployment highlight: warm yellow frame + cyan progress badge */
+.project.project-deploying{border:2px solid #ffd600;box-shadow:0 0 0 1px #ffdf3755,0 0 14px #ffd60080,0 0 27px #ffd60035;animation:deploy-card-glow 2.5s ease-in-out infinite;transform:translateY(-2px)}
+.project.project-deploying .project-summary h3{color:#ffda00;text-shadow:0 0 9px #ffd60080;animation:deploy-title-glow 2.5s ease-in-out infinite}
+.project.project-deploying .deploying-label{color:#39eaff;background:#00cfff18;border:1px solid #00e5ff;box-shadow:0 0 11px #00e5ff55}
+.project.project-deploying:hover{border-color:#ffe545;box-shadow:0 0 0 1px #ffdf3777,0 0 20px #ffd600aa,0 0 32px #ffd60044}
+@keyframes deploy-card-glow{0%,100%{box-shadow:0 0 0 1px #ffdf3744,0 0 10px #ffd60055,0 0 19px #ffd60020}50%{box-shadow:0 0 0 1px #ffdf3788,0 0 19px #ffd60099,0 0 32px #ffd60045}}
+@keyframes deploy-title-glow{0%,100%{text-shadow:0 0 4px #ffd60055}50%{text-shadow:0 0 12px #ffd600cc}}
+@media(prefers-reduced-motion:reduce){.project.project-deploying,.project.project-deploying .project-summary h3{animation:none}}
