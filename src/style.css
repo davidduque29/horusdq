@@ -82,3 +82,9 @@
 .project-foot a{flex-shrink:0}
 .project .workflow-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
 .supabase-panel{margin-top:30px}
+
+/* Subtle neon-green accent for GitHub repository cards */
+.project{border-color:color-mix(in srgb,#22C55E 25%,var(--border));transition:border-color .2s ease,box-shadow .2s ease,transform .2s ease}
+.project:hover,.project:focus-within{border-color:#22C55E;box-shadow:0 0 0 1px #22c55e55,0 0 18px #22c55e20;transform:translateY(-2px)}
+@media(hover:none){.project:hover{transform:none;box-shadow:none;border-color:color-mix(in srgb,#22C55E 25%,var(--border))}}
+@media(prefers-reduced-motion:reduce){.project{transition:none}}
