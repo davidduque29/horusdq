@@ -34,3 +34,24 @@
 @media(max-width:650px){.mobile-brand{display:flex}.crumb{display:none}.top{height:62px}.intro{gap:13px}.intro .primary{padding:11px}.notice{padding:9px 11px;font-size:10px;margin-bottom:16px}.notice-extra{display:none}.stats{gap:9px}.stat{padding:12px}.stat>strong{font-size:27px}.project{padding:15px}.project-top{align-items:center}.project .divider{margin:12px 0}.section-head{margin:25px 0 12px}.content{padding-top:22px}.eyebrow{margin-bottom:9px}h1{font-size:25px}}
 
 .notify-panel{grid-column:1/-1}.notify-panel h2{display:flex;align-items:center;gap:9px}.notify-panel>p{max-width:750px}.setup-tag{display:inline-flex;gap:9px;align-items:center;color:var(--amber);background:color-mix(in srgb,var(--amber) 12%,transparent);border-radius:8px;padding:10px 13px;font-weight:700;font-size:12px}.notify-panel label{display:block;color:var(--muted);font-size:12px;margin:16px 0 8px}.notify-panel select,.notify-panel input[type=text],.notify-input input{background:var(--bg);border:1px solid var(--border);border-radius:9px;padding:11px;color:var(--text);min-width:0}.notify-panel select{max-width:400px;width:100%}.notify-input{display:flex;gap:9px;flex-wrap:wrap}.notify-input input{flex:1}.notify-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:20px 0}.notify-options label{display:flex;align-items:center;gap:9px;border:1px solid var(--border);padding:11px;border-radius:8px;margin:0;color:var(--text)}.notify-options input{accent-color:#15803D;width:17px;height:17px}.account-strip{display:flex;align-items:center;gap:10px;color:var(--muted);flex-wrap:wrap}.account-strip span{flex:1}.account-strip b{color:var(--text)}.notify-message{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--green)}@media(max-width:650px){.notify-options{grid-template-columns:1fr}}
+
+/* Overview: weekly calendar and Supabase project health */
+.week-panel,.supabase-panel{border:1px solid var(--border);border-radius:16px;background:var(--card);padding:22px;margin-bottom:20px}
+.week-header,.supabase-heading{display:flex;justify-content:space-between;align-items:center;gap:14px}
+.week-header h2,.supabase-heading h2{display:flex;align-items:center;gap:10px;font-size:19px;margin:0 0 8px}
+.week-header p,.supabase-heading p{margin:0;color:var(--muted);font-size:12px}
+.week-controls{display:flex;gap:8px}
+.week-controls button{background:var(--hover);border:1px solid var(--border);border-radius:10px;color:var(--text);min-width:42px;height:42px;padding:0 12px;font-weight:800;display:grid;place-items:center}
+.week-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px;margin-top:22px}
+.week-day{border-radius:13px;padding:15px 4px;background:var(--hover);display:flex;align-items:center;flex-direction:column;gap:8px;color:var(--text)}
+.week-day span{font-size:13px;font-weight:700;text-transform:capitalize}.week-day strong{font-size:24px}
+.week-day.today{background:#6857E8;color:#fff;box-shadow:0 8px 24px #6857e844}
+.week-caption{margin-top:18px;border-top:1px solid var(--border);padding-top:14px;color:var(--muted);font-size:12px;text-transform:capitalize}
+.supabase-heading .secondary:disabled{opacity:.5;cursor:not-allowed}
+.supabase-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:19px}
+.supabase-item{border:1px solid var(--border);background:var(--hover);border-radius:12px;padding:15px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.supabase-item strong{font-size:13px}.supabase-item small{color:var(--muted);font-size:11px}
+.supabase-state{font-size:11px;font-weight:800}.supabase-state.active{color:var(--green)}.supabase-state.paused{color:var(--red)}.supabase-state.unverified{color:var(--muted)}
+.supabase-disclaimer{color:var(--muted);font-size:11px;line-height:1.5;margin:16px 0 0}
+@media(max-width:900px){.supabase-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.week-panel,.supabase-panel{padding:14px}.week-header h2,.supabase-heading h2{font-size:15px}.week-controls{gap:4px}.week-controls button{min-width:32px;height:35px;padding:0 8px}.week-days{gap:4px;margin-top:16px}.week-day{border-radius:9px;padding:11px 2px;gap:5px}.week-day span{font-size:10px}.week-day strong{font-size:17px}.supabase-grid{gap:8px}.supabase-item{padding:11px}.supabase-heading .secondary{padding:9px;font-size:11px}}
