@@ -1,6 +1,6 @@
 export type State = 'success'|'failure'|'running'|'cancelled'|'unknown';
 export type Repo={owner:string;repo:string;label:string};
-export type Run={id:number;name:string;status:string;conclusion:string|null;created_at:string;updated_at:string;head_branch:string;html_url:string};
+export type Run={id:number;run_number?:number;name:string;status:string;conclusion:string|null;created_at:string;updated_at:string;head_branch:string;html_url:string};
 export type Snapshot={repo:Repo;runs:Run[];error?:string;at?:string};
 export const starter:Repo[]=[{owner:'davidduque29',repo:'orbit-tasks',label:'Orbit Tasks'},{owner:'davidduque29',repo:'korpelyt',label:'Korpelyt'},{owner:'davidduque29',repo:'trackvikol',label:'TrackVikol'},{owner:'davidduque29',repo:'horusdq',label:'HorusDQ'}];
 export function runState(run?:Run):State{if(!run)return 'unknown';if(run.status!=='completed')return 'running';if(run.conclusion==='success')return 'success';if(run.conclusion==='failure')return 'failure';if(run.conclusion==='cancelled')return 'cancelled';return 'unknown'}
