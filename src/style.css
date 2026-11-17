@@ -55,3 +55,22 @@
 .supabase-disclaimer{color:var(--muted);font-size:11px;line-height:1.5;margin:16px 0 0}
 @media(max-width:900px){.supabase-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.week-panel,.supabase-panel{padding:14px}.week-header h2,.supabase-heading h2{font-size:15px}.week-controls{gap:4px}.week-controls button{min-width:32px;height:35px;padding:0 8px}.week-days{gap:4px;margin-top:16px}.week-day{border-radius:9px;padding:11px 2px;gap:5px}.week-day span{font-size:10px}.week-day strong{font-size:17px}.supabase-grid{gap:8px}.supabase-item{padding:11px}.supabase-heading .secondary{padding:9px;font-size:11px}}
+
+/* Persistent, compact week navigation in top bar */
+.header-week{flex:1;min-width:0;display:flex;justify-content:center;padding:0 12px}
+.header-week .week-panel{border:0;background:transparent;margin:0;padding:0;display:flex;align-items:center;gap:12px;min-width:0}
+.header-week .week-header{display:contents}
+.header-week .week-header>div:first-child{display:none}
+.header-week .week-controls{order:2;gap:3px}
+.header-week .week-controls button{width:27px;min-width:27px;height:29px;padding:0;font-size:10px;border-radius:6px}
+.header-week .week-controls svg{width:14px;height:14px}
+.header-week .week-controls button:nth-child(2){width:35px}
+.header-week .week-days{order:1;display:flex;gap:3px;margin:0}
+.header-week .week-day{padding:4px 5px;min-width:30px;gap:1px;border-radius:6px}
+.header-week .week-day span{font-size:9px}.header-week .week-day strong{font-size:12px}
+.header-week .week-day.today{box-shadow:none}
+.header-week .week-caption{display:none}
+@media(max-width:1150px){.header-week .week-controls{display:none}.header-week .week-day{min-width:24px;padding:4px 3px}}
+@media(max-width:850px){.header-week{padding:0 5px}.header-week .week-day{min-width:22px}.header-week .week-day span{font-size:8px}.header-week .week-day strong{font-size:11px}}
+@media(max-width:650px){.header-week{justify-content:center}.header-week .week-day{min-width:23px}.header-week .week-days{gap:2px}.header-week .week-panel{gap:2px}.header-week .week-controls{display:none}.actions .api{display:none}}
+@media(max-width:400px){.header-week .week-day{min-width:20px;padding:4px 2px}.header-week .week-day span{font-size:7px}.header-week .week-day strong{font-size:10px}}
