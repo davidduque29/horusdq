@@ -74,3 +74,11 @@
 @media(max-width:850px){.header-week{padding:0 5px}.header-week .week-day{min-width:22px}.header-week .week-day span{font-size:8px}.header-week .week-day strong{font-size:11px}}
 @media(max-width:650px){.header-week{justify-content:center}.header-week .week-day{min-width:23px}.header-week .week-days{gap:2px}.header-week .week-panel{gap:2px}.header-week .week-controls{display:none}.actions .api{display:none}}
 @media(max-width:400px){.header-week .week-day{min-width:20px;padding:4px 2px}.header-week .week-day span{font-size:7px}.header-week .week-day strong{font-size:10px}}
+
+/* Keep long Git branch names inside project cards */
+.project-foot{min-width:0;overflow:hidden}
+.project-foot span{min-width:0;flex:1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}
+.project-foot span svg{vertical-align:middle;flex-shrink:0;margin-right:4px}
+.project-foot a{flex-shrink:0}
+.project .workflow-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+.supabase-panel{margin-top:30px}
